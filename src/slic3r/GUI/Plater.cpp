@@ -1032,7 +1032,6 @@ void Sidebar::update_all_preset_comboboxes()
         ams_btn->Show();
         //update print button default value for bbl or third-party printer
         p_mainframe->set_print_button_to_default(MainFrame::PrintSelectType::ePrintPlate);
-        m_bed_type_list->Enable();
 
 
     } else {
@@ -1049,8 +1048,6 @@ void Sidebar::update_all_preset_comboboxes()
             p_mainframe->load_printer_url(url);
         }
 
-        m_bed_type_list->SelectAndNotify(btPEI-1);
-        m_bed_type_list->Disable();
     }
 
     // Update the print choosers to only contain the compatible presets, update the dirty flags.
